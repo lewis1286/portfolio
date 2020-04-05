@@ -1,0 +1,38 @@
+<html>
+    <head>
+
+    </head>
+
+    <body>
+        <div id="container">
+            <p>Sierra's feeding duration stats: </p>
+        </div>
+    </body>
+
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script>
+        let container = d3.select("#container")
+
+        d3.csv('data_clean.csv').then(dataLoaded)
+
+        function dataLoaded(feedings) {
+            // let minDuration, maxDuration = d3.extent(feedings, d => d.duration)
+            let nFeedings = feedings.length
+            write('N Duration: ' + nFeedings)
+
+            let maxDuration = d3.max(feedings, d => d.duration)
+            write('Max Duration: ' + maxDuration)
+            let minDuration = d3.min(feedings, d => d.duration)
+
+            write('Min Duration: ' + minDuration)
+
+            let meanDuration = d3.mean(feedings, d => d.duration)
+            write('Mean Duration: ' + meanDuration)
+            // handle the data!
+        }
+
+        function write(text) {
+            container.append("div").text(text)
+        }
+    </script>
+</html>
