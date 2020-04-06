@@ -3,6 +3,15 @@
 
 * Running Locally: `bundle exec jekyll serve`, `http://127.0.0.1:4000/`
 
+## TODO:
+* Favicon
+* Get Homepage links into (cards)[https://getbootstrap.com/docs/4.4/components/card/]
+* complete histogram
+* Fit colorscheme to something we like!
+* Build slider over raw
+
+
+
 Forking from the below
 
 # Boostrap 4 Github Pages
