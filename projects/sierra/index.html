@@ -1,38 +1,115 @@
-<html>
-    <head>
+<!DOCTYPE html>
+<html lang="en">
 
-    </head>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+    <title>Home | Data Science and Visualization</title>
+    <meta name="generator" content="Jekyll v3.8.5" />
+    <meta property="og:title" content="Home" />
+    <meta property="og:locale" content="en_US" />
+    <meta name="description" content="Experiments with D3 and other viz tools" />
+    <meta property="og:description" content="Experiments with D3 and other viz tools" />
+    <link rel="canonical" href="http://localhost:4000/" />
+    <meta property="og:url" content="http://localhost:4000/" />
+    <meta property="og:site_name" content="Data Science and Visualization" />
+    <script type="application/ld+json">
+{"url":"http://localhost:4000/","headline":"Home","name":"Data Science and Visualization","description":"Experiments with D3 and other viz tools","@type":"WebSite","@context":"https://schema.org"}</script>
+    <!-- End Jekyll SEO tag -->
+    <link rel="stylesheet" href="../../assets/main.css">
+    <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml"
+        title="Data Science and Visualization" />
+    <script src="../../assets/javascript/bootstrap/jquery.min.js"></script>
+    <script src="../../assets/javascript/bootstrap/bootstrap.bundle.min.js"></script>
+</head>
 
-    <body>
-        <div id="container">
-            <p>Sierra's feeding duration stats: </p>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" rel="author" href="/">Data Science and Visualization</a><button
+                class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://github.com/lewis1286/portfolio">Fork me on Github</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-    </body>
+    </nav>
+    <div class="py-5">
+        <div class="container page-content">
+            <article>
 
-    <script src="https://d3js.org/d3.v5.min.js"></script>
-    <script>
-        let container = d3.select("#container")
+                <header>
+                    <h1>Sierra's feeding habits</h1>
+                </header>
 
-        d3.csv('data_clean.csv').then(dataLoaded)
+                <div id="feeding_text"></div>
 
-        function dataLoaded(feedings) {
-            // let minDuration, maxDuration = d3.extent(feedings, d => d.duration)
-            let nFeedings = feedings.length
-            write('N Duration: ' + nFeedings)
+                <div id='histogram'>
+                    <svg id='histogramSvg'></svg>
+                </div>
 
-            let maxDuration = d3.max(feedings, d => d.duration)
-            write('Max Duration: ' + maxDuration)
-            let minDuration = d3.min(feedings, d => d.duration)
+                <div>
+                    <p> some text later on</p>
+                </div>
 
-            write('Min Duration: ' + minDuration)
+            </article>
 
-            let meanDuration = d3.mean(feedings, d => d.duration)
-            write('Mean Duration: ' + meanDuration)
-            // handle the data!
-        }
+        </div>
+    </div>
+    <div class="py-5 border-top">
+        <div class="container">
 
-        function write(text) {
-            container.append("div").text(text)
-        }
-    </script>
+            <p class="h5 mb-3">Data Science and Visualization</p>
+
+            <div class="row">
+
+                <div class="col-sm">
+                    <ul class="list-unstyled">
+                        <li>Data Science and Visualization</li>
+                        <li>
+                            <a href="mailto:">
+
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+
+                <div class="col-sm text-right">
+                    <p>Experiments with D3 and other viz tools</p>
+
+                    <p>
+                        <a href="https://nicolas-van.github.io/bootstrap-4-github-pages/">Powered by Bootstrap 4 Github
+                            Pages</a>
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</body>
+<script src="https://d3js.org/d3.v5.min.js"></script>
+<script src="feedings.js"></script>
+
+<script>
+    let feedingTextContainer = d3.select("#feeding_text")
+    d3.csv('data_clean.csv').then(dataLoaded)
+
+// things to plot:
+// feeding duration histogram (note outliers)
+// total feeding time by day
+// number of feedings per day
+// feedings day vs night by week
+// spacing per feedings and duration of the second feeding (?hungrier?)
+// fourier analysis -
+</script>
+
 </html>

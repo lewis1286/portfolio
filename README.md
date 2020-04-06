@@ -1,6 +1,8 @@
 
 # Personal Portfolio
 
+* Running Locally: `bundle exec jekyll serve`, `http://127.0.0.1:4000/`
+
 Forking from the below
 
 # Boostrap 4 Github Pages
