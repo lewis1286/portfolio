@@ -1,13 +1,17 @@
 
 # Personal Portfolio
 
+Viewable (here)[https://lewis1286.github.io/portfolio/]
+
+Current Bootstrap Theme: (Litera)[https://bootswatch.com/litera/].  See bootswatch.com for other easy to use themes.
+
 * Running Locally: `bundle exec jekyll serve`, `http://127.0.0.1:4000/`
 
 ## TODO:
 * Favicon
 * Get Homepage links into (cards)[https://getbootstrap.com/docs/4.4/components/card/]
 * complete histogram
-* Fit colorscheme to something we like!
+* Fit colorscheme to something we like! (Or maybe change theme)
 * Build slider over raw
 
 
