@@ -13,7 +13,11 @@ Current Bootstrap Theme: (Litera)[https://bootswatch.com/litera/].  See bootswat
 * complete histogram
 * Fit colorscheme to something we like! (Or maybe change theme)
 * Build slider over raw
+* Switch to a (react)[https://github.com/gitname/react-gh-pages] app
+* build a line chart n_feedings, total_feeding_duration vs time
 
+## Neat Viz resources:
+* [http://www.datasketch.es/]
 
 
 Forking from the below

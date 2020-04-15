@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<style>
+    svg {
+        border-width: 1 px,
+        border
+    }
+</style>
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -52,7 +58,7 @@
                 <div id="feeding_text"></div>
 
                 <div id='histogram'>
-                    <svg id='histogramSvg'></svg>
+                    <svg id='histogramSvg', width=500, length=500></svg>
                 </div>
 
                 <div>
@@ -101,7 +107,7 @@
 
 <script>
     let feedingTextContainer = d3.select("#feeding_text")
-    d3.csv('data_clean.csv').then(dataLoaded)
+    d3.csv('./data/data_clean.csv').then(dataLoaded)
 
 // things to plot:
 // feeding duration histogram (note outliers)
