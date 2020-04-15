@@ -1,0 +1,13 @@
+html,
+body {
+  font-family: "Open Sans", sans-serif;
+  padding: 20px;
+}
+
+.main-ctn {
+    width: 100%;
+}
+
+.main-ctn h1 {
+    margin-bottom: 0;
+}

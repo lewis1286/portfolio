@@ -1,6 +1,13 @@
 <html>
 
 <head>
+    <title>Feeding Habits</title>
+    <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap"
+    rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+
     <style>
         body {
             padding-left: 20px;
@@ -13,36 +20,41 @@
 </head>
 
 <body>
-    <div>
-        <h1 id="dayNum">Day: ? </h1>
+    <div class="main-ctn">
+        <div>
+            <h1>Sierra's feeding habits for her first 150 days</h1>
+        </div>
+
+        <div>
+            <h1 id="dayNum">Day: ? </h1>
+        </div>
+
+
+        <!-- main plot -->
+        <svg id="mainPlot" style="border: solid 1px #000; margin-top: 10px">
+            <g id="body" style="transform:translate(40px,50px)"></g>
+            <g id="xAxis"></g>
+        </svg>
+
+        <!-- Histogram -->
+        <!-- <svg id="histogram" height="160" width="110" , style="border: solid 1px #000; margin-top: 10px">
+            <g id="body" style="transform:translate(40px,10px)"></g>
+        </svg> -->
+
+        <div class="row align-items-center">
+        <div class="col-sm"><div id="slider-step"></div></div>
+        </div>
     </div>
-
-
-
-    <!-- main plot -->
-    <svg id="mainPlot" height="200" width="600" , style="border: solid 1px #000; margin-top: 10px">
-        <g id="body" style="transform:translate(40px,50px)"></g>
-        <g id="xAxis"></g>
-    </svg>
-
-    <!-- Histogram -->
-    <!-- <svg id="histogram" height="160" width="110" , style="border: solid 1px #000; margin-top: 10px">
-        <g id="body" style="transform:translate(40px,10px)"></g>
-    </svg> -->
-
-    <div class="row align-items-center">
-      <div class="col-sm"><div id="slider-step"></div></div>
-    </div>
-
 </body>
 
 <!-- JS -->
 <script src="https://d3js.org/d3.v5.min.js"></script>
 <script src="https://unpkg.com/d3-simple-slider"></script>
-<script src="scripts.js"></script>
+<script src="script.js"></script>
 <script>
     let dayContainer = d3.select('#dayNum');
     let chartContainer = d3.select('#mainPlot');
+    let mainPlot = d3.select('#mainPlot');
     let body = d3.select('#body');
     let defaultDay = 20;
 

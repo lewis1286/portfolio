@@ -34,7 +34,7 @@ function parseData(feedings) {
 }
 
 function chartMeta() {
-    var margin = {top: 10, right: 10, bottom: 10, left: 10}
+    var margin = {top: 10, right: 10, bottom: 30, left: 10}
     var width = 600 - margin.left - margin.right
     var height = 200 - margin.top - margin.bottom
 
@@ -42,6 +42,10 @@ function chartMeta() {
         .style("transform",
             `translate(${margin.left}px,${height - margin.bottom}px)`
         )
+
+    // make svg responsive
+
+    mainPlot.attr("viewBox", [0, 0, width, height])
 
     return {margin, width, height}
 
