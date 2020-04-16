@@ -2,12 +2,18 @@ html,
 body {
   font-family: "Open Sans", sans-serif;
   padding: 20px;
+  background-color: #f8f9ef;
 }
 
 .main-ctn {
     width: 100%;
+    color: #53534b;
 }
 
 .main-ctn h1 {
     margin-bottom: 0;
+}
+
+.rect-class {
+    color: #432b40;
 }

@@ -80,7 +80,7 @@ function showData(config, feedings, day) {
         .attr("y", .2)
         .attr("x", (d) => xScale(d.start))
         .attr("width", (d) => xScale(d.end) - xScale(d.start))
-        .attr("fill", "#2a5599")
+        .attr("fill", "#53534b")
 
     join.merge(new_elements)
         .transition()
@@ -88,7 +88,7 @@ function showData(config, feedings, day) {
         .attr("y", .2)
         .attr("x", (d) => xScale(d.start))
         .attr("width", (d) => xScale(d.end) - xScale(d.start))
-        .attr("fill", "#2a5599")
+        .attr("fill", "#53534b")
 
     join.exit().remove()
 
