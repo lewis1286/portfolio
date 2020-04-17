@@ -1,7 +1,7 @@
 
-# Personal Portfolio
+# Personal Visualization Portfolio
 
-Viewable (here)[https://lewis1286.github.io/portfolio/]
+Viewable (here)[https://viz.diffusecreation.com]
 
 Current Bootstrap Theme: (Litera)[https://bootswatch.com/litera/].  See bootswatch.com for other easy to use themes.
 
@@ -16,24 +16,16 @@ Current Bootstrap Theme: (Litera)[https://bootswatch.com/litera/].  See bootswat
 * Switch to a (react)[https://github.com/gitname/react-gh-pages] app
 * build a line chart n_feedings, total_feeding_duration vs time
 
+## Chart Ideas:
+* Spectrogram using voice of viewer
+  dial adjusting tradeoff between frequency and time resolution
+
 ## Neat Viz resources:
 * [http://www.datasketch.es/]
 
+# Source
 
-Forking from the below
-
-# Boostrap 4 Github Pages
-
-[![Build Status](https://travis-ci.org/nicolas-van/bootstrap-4-github-pages.svg?branch=master)](https://travis-ci.org/nicolas-van/bootstrap-4-github-pages)
-
-A [Bootstrap 4](https://getbootstrap.com/) start up project for [Github Pages](https://pages.github.com/) and [Jekyll](https://jekyllrb.com/).
-
-* A full Bootstrap 4 theme usable both on Github Pages and with a standalone Jekyll.
-* Recompiles Bootstrap from SCSS files, which allows to customize Bootstrap's variables and use Bootstrap themes.
-* Full support of Bootstrap's JavaScript plugins.
-* Supports all features of Github Pages and Jekyll.
-
-[See the website for demonstration and documentation](https://nicolas-van.github.io/bootstrap-4-github-pages/).
+[Forked from here](https://nicolas-van.github.io/bootstrap-4-github-pages/).
 
 ## Contribution
 

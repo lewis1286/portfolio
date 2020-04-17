@@ -1,84 +1,72 @@
-// Litera 4.3.1
+// Superhero 4.3.1
 // Bootswatch
 
 
 // Variables ===================================================================
 
-$font-family-serif:      Georgia, Cambria, "Times New Roman", Times, serif !default;
+$web-font-path: "https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" !default;
+@import url($web-font-path);
 
 // Navbar ======================================================================
 
 .navbar {
   font-size: $font-size-sm;
-
-  &.bg-dark {
-    background-color: $success !important;
-  }
-
-  &.bg-light {
-    background-color: #fff !important;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-
-    &.navbar-fixed-top {
-      border-width: 0 0 1px 0;
-    }
-
-    &.navbar-fixed-bottom {
-      border-width: 1px 0 0 0;
-    }
-  }
 }
 
 // Buttons =====================================================================
 
 .btn {
-  border-radius: 1.078em;
-
-  &-lg {
-    border-radius: 2.688em;
-  }
-
-  &-sm {
-    border-radius: 0.844em;
+  @each $color, $value in $theme-colors {
+    &-#{$color} {
+      @if $enable-gradients {
+        background: $value linear-gradient(180deg, mix($white, $value, 15%), $value) repeat-x;
+      } @else {
+        background-color: $value;
+      }
+    }
   }
 }
 
 // Typography ==================================================================
 
-p {
-  font-family: $font-family-serif;
-}
+.dropdown-menu {
 
-blockquote {
-  font-style: italic;
-}
-
-footer {
   font-size: $font-size-sm;
 }
 
-.lead {
-  color: $gray-600;
-  font-family: $font-family-sans-serif;
+.dropdown-header {
+  font-size: $font-size-sm;
+}
+
+.blockquote-footer {
+  color: $body-color;
 }
 
 // Tables ======================================================================
 
-table,
 .table {
   font-size: $font-size-sm;
 
-  &-primary,
-  &-secondary,
-  &-success,
-  &-info,
-  &-warning,
-  &-danger {
+  .thead-dark th {
+    color: $white;
+  }
+
+  a:not(.btn) {
+    color: #fff;
+    text-decoration: underline;
+  }
+
+  .dropdown-menu a {
+    text-decoration: none;
+  }
+
+  .text-muted {
+    color: $text-muted;
+  }
+
+  &-dark {
     color: #fff;
   }
-}
-
-.table {
 
   &-primary {
     &, > th, > td {
@@ -195,61 +183,88 @@ table,
 
 // Forms =======================================================================
 
-// Navs ========================================================================
-
-.nav,
-.breadcrumb,
-.pagination {
+label,
+.radio label,
+.checkbox label,
+.help-block {
   font-size: $font-size-sm;
 }
 
-.dropdown-menu {
-  font-size: $font-size-sm;
+// Navs ========================================================================
+
+.nav-tabs,
+.nav-pills {
+  .nav-link,
+  .nav-link:hover {
+    color: $body-color;
+  }
+
+  .nav-link.disabled {
+    color: $nav-link-disabled-color;
+  }
+}
+
+.page-link:hover,
+.page-link:focus {
+  color: #fff;
+  text-decoration: none;
 }
 
 // Indicators ==================================================================
 
 .alert {
+  border: none;
   color: $white;
-  font-size: $font-size-sm;
 
-  &, p {
-    font-family: $font-family-sans-serif;
-  }
-
-  a, .alert-link {
+  a,
+  .alert-link {
     color: #fff;
-    font-weight: normal;
     text-decoration: underline;
   }
 
   @each $color, $value in $theme-colors {
     &-#{$color} {
       @if $enable-gradients {
-        background: $value linear-gradient(0deg, mix($body-bg, $value, 15%), $value) repeat-x;
+        background: $value linear-gradient(180deg, mix($white, $value, 15%), $value) repeat-x;
       } @else {
         background-color: $value;
       }
     }
   }
-
-  &-light {
-    &,
-    & a,
-    & .alert-link {
-      color: $body-color;
-    }
-  }
 }
 
 .badge {
-  vertical-align: bottom;
+  &-warning,
+  &-info {
+    color: $white;
+  }
+}
+
+.close {
+  color: #fff;
+  text-shadow: none;
+  opacity: 0.5;
+
+  &:hover,
+  &:focus {
+    opacity: 1;
+  }
 }
 
 // Progress bars ===============================================================
 
+// Popovers      ===============================================================
+
+.popover-header {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
 // Containers ==================================================================
 
-.list-group {
-  font-size: $font-size-sm;
+.modal {
+  &-header,
+  &-footer {
+    background-color: $table-hover-bg;
+  }
 }
