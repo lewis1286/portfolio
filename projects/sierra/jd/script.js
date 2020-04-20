@@ -1,41 +1,51 @@
-overlap = 16;
-height = 1000;
-width = 1000;
+overlap = 10;
+svgHeight = 1000 * 2.2;
+svgWidth = 1000 * 1.75;
+plotYShift = -70;
+margin = {top: 420, right: 50, bottom: 130, left: 50};
 
 function createSVG(data) {
     const svg = d3.select("#plot")
-        .attr("viewBox", [0, 0, width, height]);
+        .attr("viewBox", [0, 0, svgWidth, svgHeight]);
 
     const serie = svg.append("g")
         .selectAll("g")
         .data(data)
         .join("g")
-        .attr("transform", (d, i) => `translate(0,${y(i) + 1})`);
+        .attr(
+            "transform", (d, i) => `translate(0,${plotYShift + y(i) + 1})`
+        );
 
     serie.append("path")
-        .attr("fill", "#fff")
+        .attr("fill", "black")
         .attr("d", area);
 
     serie.append("path")
         .attr("fill", "none")
-        .attr("stroke", "black")
-        .attr("d", line);
+        .attr("stroke", "white")
+        .attr("d", line)
+        .attr("stroke-width", 3)
 
     svg.append("g")
         .append("text")
-        .text("Sierra Marie")
-        .attr("transform", `translate(${width * 3 / 12}, 80)`)
-        .attr("font-size", "150%")
+        .text("SIERRA MARIE")
+        .attr("transform", `translate(${svgWidth * 0.5 / 12}, 180)`)
+        .attr("font-size", "350%")
+        .attr("fill", "white")
 
     svg.append("g")
         .append("text")
-        .text("Known Feedings")
-        .attr("transform", `translate(${width * 2 / 12}, ${height - 50})`)
-        .attr("font-size", "150%")
+        .text("KNOWN FEEDINGS")
+        .attr(
+            "transform", `translate(${svgWidth * .3 / 12}, ${svgHeight - 30})`
+        )
+        .attr("font-size", "280%")
+        .attr("text-align" , "left")
+        .attr("fill", "white")
     // svg.append("g")
     //     .call(xAxis);
 
-    // return svg.node();
+    // w: 1.75, h: 2.5
 
 }
 
@@ -54,20 +64,19 @@ function makeChart() {
 
 function chartMain(data) {
 
-    margin = {top: 250, right: 50, bottom: 130, left: 50}
 
     x = d3.scaleLinear()
         .domain([0, data[0].length - 1])
-        .range([margin.left, width - margin.right])
+        .range([margin.left, svgWidth - margin.right])
 
     y = d3.scalePoint()
         .domain(data.map((d, i) => i))
-        .range([margin.top, height - margin.bottom])
+        .range([margin.top, svgHeight - margin.bottom])
 
     z = d3.scaleLinear()
         .domain([
-        d3.min(data, d => d3.min(d)),
-        d3.max(data, d => d3.max(d))
+            d3.min(data, d => d3.min(d)),
+            d3.max(data, d => d3.max(d))
         ])
         .range([0, -overlap * y.step()])
 

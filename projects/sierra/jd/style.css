@@ -1,11 +1,18 @@
-html,
-body {
+/* body {
   font-family: "Open Sans", sans-serif;
   font-size: 150%;
-  text-align: center;
+} */
+html,
+body {
+  margin:0;
+  padding:0;
+  overflow:hidden;
+  background-color: black;
 }
 
 svg {
-  font-family: "Open Sans", sans-serif;
-  font-size: 150%;
+  height:100%;
+  width:100%;
+  font-family: Univers, Helvetica, sans-serif;
+  font-size: 400%;
 }
