@@ -10,9 +10,17 @@ body {
   font-size: 150%;
 }
 
-svg {
-  height:100%;
-  width:100%;
-  font-family: Univers, Helvetica, sans-serif;
-  font-size: 400%;
+div {
+  text-align: justify;
+}
+
+div:after {
+  content: "";
+  display: inline-block;
+  width: 100%;
+}
+
+input[type="number"]
+{
+    font-size:24px;
 }
