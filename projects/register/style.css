@@ -1,0 +1,17 @@
+/* body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 150%;
+} */
+html,
+body {
+  margin:10;
+  padding:10;
+  overflow:hidden;
+}
+
+svg {
+  height:100%;
+  width:100%;
+  font-family: Univers, Helvetica, sans-serif;
+  font-size: 400%;
+}

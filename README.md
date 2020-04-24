@@ -19,6 +19,7 @@ Current Bootstrap Theme: (Litera)[https://bootswatch.com/litera/].  See bootswat
 ## Chart Ideas:
 * Spectrogram using voice of viewer
   dial adjusting tradeoff between frequency and time resolution
+* box of (radio) waves in 3d
 
 ## Neat Viz resources:
 * [http://www.datasketch.es/]

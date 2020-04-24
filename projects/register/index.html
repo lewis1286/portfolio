@@ -1,0 +1,45 @@
+<html>
+
+<head>
+
+    <title>Register</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+
+    <style>
+        body {
+            padding-left: 20px;
+        }
+
+        #details {
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+  <h1>Stella and Frida's Shop</h1>
+  <div>
+    <p>Item Price: </p>
+    <p id="item-price"></p>
+  </div>
+
+  <div>
+    <p>Customer Paid: </p>
+    <p id="customer-paid"></p>
+  </div>
+
+  <div>
+    <p> Change to give: </p>
+    <input type="number" id="change-due">
+    <p id="response-message"></p>
+  </div>
+</body>
+
+<!-- JS -->
+<script src="https://d3js.org/d3.v5.min.js"></script>
+<script src="script.js"></script>
+<script>
+  watch();
+</script>
+
+</html>
