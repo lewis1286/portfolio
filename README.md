@@ -20,6 +20,8 @@ Current Bootstrap Theme: (Litera)[https://bootswatch.com/litera/].  See bootswat
 * Spectrogram using voice of viewer
   dial adjusting tradeoff between frequency and time resolution
 * box of (radio) waves in 3d
+* leverage [this](https://observablehq.com/@d3/versor-dragging) or the transparent version to plot corona virus cases over time
+*
 
 ## Neat Viz resources:
 * [http://www.datasketch.es/]
